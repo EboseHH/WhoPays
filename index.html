@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhoPays?</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-center">
+    <div class="text-center py-10">
+      <h1 class="text-5xl mb-8">WhoPays?</h1>
+      <p>
+        Insert the names here and press enter after each name <br />
+        After entering all names, press 'Select Player' to determine who pays!
+      </p>
+    </div>
+    <div>
+      <form>
+        <input class="border-solid border-2 border-black py-1" />
+        <button
+          class="px-6 py-2 text-sm rounded shadow bg-emerald-100 hover:bg-emerald-200 text-emerald-500 ml-4"
+          type="submit" 
+        >
+          Add
+        </button>
+      </form>
+      <div id="entries">
+
+
+      </div>
+    </div>
+    <div class="py-5">
+      <button
+        class="px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
+        type="button"
+      >
+        Shuffle!
+      </button>
+    </div>
+  </body>
+</html>
