@@ -1,6 +1,12 @@
 //create an array to hold the names from the form inputs
 const entries = [];
 
+function setActiveSection(sectionName) {
+  document.querySelector(`#${sectionName}`).classList.add("active");
+}
+
+setActiveSection("landing")
+
 // add an event listener to the forms for when it is submitted
 document.querySelector("#names").addEventListener("submit", (event) => {
   // prevent the default action of the form which is to
@@ -17,7 +23,17 @@ document.querySelector("#names").addEventListener("submit", (event) => {
 
   // add each new entry to the array
   entries.push(entry);
-//  event.target is the current form element 
-// the reset method clears all the form fields
+  //  event.target is the current form element
+  // the reset method clears all the form fields
   event.target.reset();
+
+  // Construct an array of elements from the array of names (entries) that have been submitted
+  // using the map function (entries.map) which takes in the submitted names and applies
+  // the function to generate a div with the specified classes and name
+  const elements = entries.map((name) => {
+    return `<div class="submittedName inline-block ml-3 bg-amber-300 px-2 py-1">${name}</div>`;
+  });
+
+  // display each submitted name
+  document.querySelector("#entries").innerHTML = elements.join("");
 });

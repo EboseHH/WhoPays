@@ -26,27 +26,49 @@
         After entering all names, press 'Select Player' to determine who pays!
       </p>
     </div>
-    <div>
-      <form id="names">
-        <input name="name" class="border-solid border-2 border-black py-1" />
+    <section id="landing">
+      <div>
+        <form class="pb-3" id="names">
+          <input name="name" class="border-solid border-2 border-black py-2" />
+          <button
+            class="px-6 py-2 text-sm rounded shadow bg-emerald-100 hover:bg-emerald-200 text-emerald-500 ml-4"
+            type="submit"
+          >
+            Add
+          </button>
+        </form>
+        <!-- dynamically display submitted entries -->
+        <div id="entries"></div>
+      </div>
+      <div class="py-5">
         <button
-          class="px-6 py-2 text-sm rounded shadow bg-emerald-100 hover:bg-emerald-200 text-emerald-500 ml-4"
-          type="submit"
+          class="px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
+          type="button"
         >
-          Add
+          Shuffle!
         </button>
-      </form>
-      <div id="entries"></div>
-    </div>
-    <div class="py-5">
-      <button
-        class="px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
-        type="button"
-      >
-        Shuffle!
-      </button>
-    </div>
+      </div>
+    </section>
+    <section id="loading">
+      <div class="loadingio-spinner-spinner-yvydt7qqzhh">
+        <div class="ldio-pdx3q3shksc">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
 
+    <section id="result"></section>
     <script src="index.js"></script>
   </body>
 </html>
