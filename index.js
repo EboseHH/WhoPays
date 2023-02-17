@@ -2,10 +2,13 @@
 const entries = [];
 
 function setActiveSection(sectionName) {
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
   document.querySelector(`#${sectionName}`).classList.add("active");
 }
 
-setActiveSection("landing")
+setActiveSection("landing");
 
 // add an event listener to the forms for when it is submitted
 document.querySelector("#names").addEventListener("submit", (event) => {
@@ -36,4 +39,14 @@ document.querySelector("#names").addEventListener("submit", (event) => {
 
   // display each submitted name
   document.querySelector("#entries").innerHTML = elements.join("");
+});
+
+// add an event listener to the shuffle button and run the setActiveSection when the button
+// is clicked to display the loading page
+document.querySelector("#shuffle").addEventListener("click", (event) => {
+  setActiveSection("loading");
+  // set a time out on the loading page and display the results page after 2000 milliseconds
+  setTimeout(() => {
+    setActiveSection("result");
+  }, 3000);
 });

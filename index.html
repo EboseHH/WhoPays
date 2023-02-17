@@ -26,6 +26,7 @@
         After entering all names, press 'Select Player' to determine who pays!
       </p>
     </div>
+    <!--Landing page -->
     <section id="landing">
       <div>
         <form class="pb-3" id="names">
@@ -42,6 +43,7 @@
       </div>
       <div class="py-5">
         <button
+          id="shuffle"
           class="px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
           type="button"
         >
@@ -49,7 +51,14 @@
         </button>
       </div>
     </section>
+    <!--Loading page -->
+    <!-- uses a html and css loader from loading.io where each div
+    is a spike in the loading image-->
     <section id="loading">
+      <div>
+        <h2 class="text-3xl mb-8">Shuffling...</h2>
+        <p class="text-xl">please wait</p>
+      </div>
       <div class="loadingio-spinner-spinner-yvydt7qqzhh">
         <div class="ldio-pdx3q3shksc">
           <div></div>
@@ -67,7 +76,7 @@
         </div>
       </div>
     </section>
-
+    <!--result page -->
     <section id="result"></section>
     <script src="index.js"></script>
   </body>
