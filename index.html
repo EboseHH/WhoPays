@@ -18,66 +18,95 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="text-center">
-    <div class="text-center py-10">
-      <h1 class="text-5xl mb-8">WhoPays?</h1>
-      <p>
-        Insert the names here and press enter after each name <br />
-        After entering all names, press 'Select Player' to determine who pays!
-      </p>
-    </div>
-    <!--Landing page -->
-    <section id="landing">
-      <div>
-        <form class="pb-3" id="names">
-          <input name="name" class="border-solid border-2 border-black py-2" />
-          <button
-            class="px-6 py-2 text-sm rounded shadow bg-emerald-100 hover:bg-emerald-200 text-emerald-500 ml-4"
-            type="submit"
-          >
-            Add
-          </button>
-        </form>
-        <!-- dynamically display submitted entries -->
-        <div id="entries"></div>
+  <body class="text-center pt-20">
+    <main>
+      <div class="text-center mb-8">
+        <h1 class="text-5xl mb-8">WhoPays?</h1>
+        <p id="instruction">
+          Insert the names here and press enter after each name <br />
+          After entering all names, press 'Shuffle' to determine who pays!
+        </p>
       </div>
-      <div class="py-5">
-        <button
-          id="shuffle"
-          class="px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
-          type="button"
-        >
-          Shuffle!
-        </button>
-      </div>
-    </section>
-    <!--Loading page -->
-    <!-- uses a html and css loader from loading.io where each div
-    is a spike in the loading image-->
-    <section id="loading">
-      <div>
-        <h2 class="text-3xl mb-8">Shuffling...</h2>
-        <p class="text-xl">please wait</p>
-      </div>
-      <div class="loadingio-spinner-spinner-yvydt7qqzhh">
-        <div class="ldio-pdx3q3shksc">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <!--Landing page -->
+      <section id="landing">
+        <div>
+          <form class="pb-3" id="names">
+            <input
+              required
+              name="name"
+              class="rounded-lg border-solid border-2 border-black py-2"
+            />
+            <button
+              class="px-6 py-3 text-sm rounded-lg shadow bg-emerald-100 hover:bg-emerald-200 text-emerald-500 ml-4"
+              type="submit"
+            >
+              Add
+            </button>
+          </form>
+          <!-- dynamically display submitted entries -->
+          <div id="entries"></div>
         </div>
-      </div>
-    </section>
-    <!--result page -->
-    <section id="result"></section>
+        <div class="py-5">
+          <button
+            id="shuffle"
+            class="px-6 py-3 w-36 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
+            type="button"
+          >
+            Shuffle!
+          </button>
+        </div>
+      </section>
+      <!--Loading page -->
+      <!-- uses a html and css loader from loading.io where each div
+    is a spike in the loading image-->
+      <section id="loading">
+        <div>
+          <h2 class="text-3xl mb-8">Shuffling...</h2>
+          <p class="text-xl">please wait</p>
+        </div>
+        <div class="loadingio-spinner-spinner-yvydt7qqzhh">
+          <div class="ldio-pdx3q3shksc">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+      <!--result page -->
+
+      <section id="result">
+        <h2
+          id="randomName"
+          class="text-3xl mb-2 bg-amber-300 inline-block rounded-full px-3 py-1"
+        >
+          Ebose
+        </h2>
+        <p class="mb-8">Pays Today!</p>
+        <div>
+          <button
+            id="shuffleAgain"
+            class="mb-8 px-6 py-2 text-sm transition-colors duration-300 rounded rounded-full shadow-xl text-emerald-100 bg-emerald-500 hover:bg-emerald-600 shadow-emerald-400/30"
+            type="button"
+          >
+            Shuffle Again!
+          </button>
+        </div>
+        <a
+          class="underline underline-offset-4 decoration-emerald-500"
+          href="../index.html"
+          >or start a fresh shuffle</a
+        >
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
